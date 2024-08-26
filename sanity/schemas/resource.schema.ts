@@ -38,6 +38,24 @@ const schema = {
       },
     },
     {
+      name: "post",
+      title: "Post",
+      type: "document",
+      fields: [
+        {
+          name: "title",
+          title: "Title",
+          type: "string",
+        },
+        {
+          name: "body",
+          title: "Body",
+          type: "text",
+        },
+        // Add more fields as needed
+      ],
+    },
+    {
       name: "category",
       title: "Category",
       type: "string",
