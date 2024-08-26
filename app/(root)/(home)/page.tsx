@@ -1,3 +1,6 @@
+import SearchForm from "@/components/SearchForm";
+import Filters from "@/components/ui/Filters";
+
 const page = () => {
   return (
     <main className="flex-center paddings mx-auto w-full max-w-screen-2xl flex-col">
@@ -7,7 +10,9 @@ const page = () => {
             BD Pro
           </h1>
         </div>
+        <SearchForm />
       </section>
+      <Filters />
     </main>
   );
 };
