@@ -1,22 +1,20 @@
 const schema = {
   name: "resource",
-
   title: "Resource",
   type: "document",
   fields: [
     {
       name: "title",
-      type: "string",
       title: "Title",
+      type: "string",
+      require,
       validation: (Rule: any) => Rule.required(),
     },
     {
       name: "slug",
-      type: "slug",
       title: "Slug",
-      options: {
-        source: "title",
-      },
+      type: "slug",
+      options: { source: "title" },
     },
     {
       name: "downloadLink",
@@ -33,6 +31,7 @@ const schema = {
     {
       name: "poster",
       title: "Poster",
+      type: "image",
       validation: (Rule: any) => Rule.required(),
       options: {
         hotspot: true,
@@ -44,7 +43,7 @@ const schema = {
       type: "string",
       validation: (Rule: any) => Rule.required(),
       options: {
-        list: ["all", " new", "popular", "latest", "expensive", "cheap"],
+        list: ["frontend", "backend", "next 13", "fullstack", "other"],
       },
     },
   ],
